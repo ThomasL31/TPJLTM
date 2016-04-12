@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import Aeroport.*;
 
+//Modif 12/04/16 
 
 public class Vol 
 {
@@ -31,12 +33,22 @@ public class Vol
 		
 	}
 	
+	public void afficherAvion()
+	{
+		Avion a = Avion.getAvion(appareil);
+		a.afficherTout;
+
+		
+	}
+	
 	public void afficherTout()
 	{
 		for(Vol v : lesVols)
 		{
 			System.out.println(v.toString());
 		}
+		
+		afficherAvion();
 	}
 	
 	public String toString() 
