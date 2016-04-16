@@ -5,7 +5,7 @@ public class VolDepart extends Vol
 {
 	private String destination;
 	private ArrayList<VolArrive> lesVolsArrive = new ArrayList<VolArrive>();
-	public VolArrive(String idV, Avion app, String dest) 
+	public VolArrive(String idV, Avion String, String dest) 
 	{
 		super(idV, app);
 		destination = dest;
