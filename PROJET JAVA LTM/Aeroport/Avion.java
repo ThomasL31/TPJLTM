@@ -1,13 +1,13 @@
 import java.util.*;
-import Aeroport.*;
-// Modif 12/04/16 
+
+// Modif 16/04/16 
 
 public class Avion 
 {
 
 	private String immatriculation, marque, modele;
 	private boolean estGrand;
-	private static Hashtable lesAvions = new Hashtable<String,Avion>();
+	private static Hashtable<String,Avion> lesAvions = new Hashtable<String,Avion>();
 	
 	public Avion(String immat, String mar, String mod, boolean estG)
 	{
@@ -22,7 +22,7 @@ public class Avion
 	{
 		for(String i : lesAvions.keySet())
 		{
-			System.out.println(lesAvions.get(i).toString());
+		 System.out.println(lesAvions.get(i).toString());
 		}
 	}
 	
@@ -33,7 +33,7 @@ public class Avion
 				+ "]";
 	}
 	
-	public static Avion getAvion(String immat){
+	public static Avion getAvion(String immat){ //retourne un avion à partir de son immatriculation
 		return lesAvions.get(immat);
 	}
 	

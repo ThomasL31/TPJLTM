@@ -1,18 +1,17 @@
 import java.util.ArrayList;
-import Aeroport.*;
 
-//Modif 12/04/16 
+//Modif 16/04/16 
 
 public class Vol 
 {
 	private String idVol;
-	private Avion appareil;
+	private String appareil;
 	private boolean annule;
 	private boolean retarde;
 	private Horaire heure;
 	private static ArrayList<Vol> lesVols = new ArrayList<Vol>();
 	
-	public Vol(String idV, Avion app)
+	public Vol(String idV, String app)
 	{
 		idVol = idV;
 		appareil =app;
@@ -35,8 +34,8 @@ public class Vol
 	
 	public void afficherAvion()
 	{
-		Avion a = Avion.getAvion(appareil);
-		a.afficherTout;
+		Avion av = Avion.getAvion(appareil);
+		System.out.println(av.toString());
 
 		
 	}
