@@ -4,18 +4,32 @@ import java.util.ArrayList;
 public class VolDepart extends Vol 
 {
 	private String destination;
-	private ArrayList<VolArrive> lesVolsArrive = new ArrayList<VolArrive>();
-	public VolArrive(String idV, Avion String, String dest) 
+	private ArrayList<VolDepart> lesVolsDepart = new ArrayList<VolDepart>();
+	
+	public VolDepart(String idV, String app,String dest) 
 	{
 		super(idV, app);
 		destination = dest;
-		lesVolsArrive.add(this);
-		
+		lesVolsDepart.add(this);
 	}
 	
-	public VolDepart(String idV, Avion app) 
-	{
-		super(idV, app);
+	public String toString(){
+	return "VOL DEPART - ID : [" + getIdVol()+ "]" + 
+	"A destination de : " + destination + 
+	" appareil = " + getAppareil() +
+	"| annulé : "	+ isAnnule() + ", retardé : " + isRetarde() + " |";
+
 	}
+	
+	public void afficherTout(){
+		
+		for(Vol v : lesVolsDepart)
+	{
+		System.out.println(v.toString());
+		v.afficherAvion();
+	}
+	
+	}
+	
 
 }

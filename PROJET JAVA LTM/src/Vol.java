@@ -2,14 +2,13 @@ import java.util.ArrayList;
 
 //Modif 16/04/16 
 
-public class Vol 
+public abstract class Vol 
 {
 	private String idVol;
 	private String appareil;
 	private boolean annule;
 	private boolean retarde;
 	private Horaire heure;
-	private static ArrayList<Vol> lesVols = new ArrayList<Vol>();
 	
 	public Vol(String idV, String app)
 	{
@@ -17,7 +16,6 @@ public class Vol
 		appareil =app;
 		retarde = false;
 		annule = false;
-		lesVols.add(this);
 	}
 
 	public void annuler()
@@ -29,32 +27,34 @@ public class Vol
 	{
 		retarde = true;
 		heure = heure.ajout(d);
-		
 	}
 	
 	public void afficherAvion()
 	{
 		Avion av = Avion.getAvion(appareil);
-		System.out.println(av.toString());
+		System.out.println(av.toString());	
+	}
+	
+	public abstract void afficherTout();
+	
+	public abstract String toString();
 
-		
+	public String getIdVol() {
+		return idVol;
 	}
-	
-	public void afficherTout()
-	{
-		for(Vol v : lesVols)
-		{
-			System.out.println(v.toString());
-		}
-		
-		afficherAvion();
+
+	public String getAppareil() {
+		return appareil;
 	}
-	
-	public String toString() 
-	{
-		return "Vol [idVol = " + idVol + ", appareil = " + appareil + ", annule = "
-				+ annule + ", retarde = " + retarde + "]";
+
+	public boolean isAnnule() {
+		return annule;
 	}
+
+	public boolean isRetarde() {
+		return retarde;
+	}
+
 	
 	
 
