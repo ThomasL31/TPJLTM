@@ -25,7 +25,7 @@ public class VolDepart extends Vol
 		
 		for(Vol v : lesVolsDepart)
 	{
-		System.out.println(v.toString());
+	    System.out.println(v.toString() +" | ");
 		v.afficherAvion();
 	}
 	

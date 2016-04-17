@@ -5,7 +5,7 @@ public class Parking
 	
 	private String idParking;
 	private boolean disponible;
-	private ArrayList<Parking> lesParkings = new ArrayList<Parking>();
+	private static ArrayList<Parking> lesParkings = new ArrayList<Parking>();
 	
 	public Parking(String idP)
 	{

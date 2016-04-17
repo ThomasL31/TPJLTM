@@ -28,9 +28,8 @@ public class Avion
 	
 	public String toString() 
 	{
-		return "Avion [immatriculation = " + immatriculation + " ]" + ", marque = "
-				+ marque + ", modele = " + modele + ", estGrand = " + estGrand
-				+ "]";
+		return "Avion [" + immatriculation + "]" + ", marque :"
+				+ marque + ", modele : " + modele + ", estGrand : " + estGrand;
 	}
 	
 	public static Avion getAvion(String immat){ //retourne un avion à partir de son immatriculation
