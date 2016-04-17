@@ -1,8 +1,10 @@
 public class Duree implements Comparable
 {
 
-  private int heures, minutes;
-  
+
+
+private int heures, minutes;
+
   public Duree() 
   {
 
@@ -72,5 +74,5 @@ public class Duree implements Comparable
 
   }
 
-// Bonsoir
+
 }

@@ -1,6 +1,11 @@
 import java.util.*;
 
-// Modif 16/04/16 
+/*Modif du 17/04/2016 
+  Ajout d'une méthode permettant de connaitre la taille d'un avion  
+*/
+ 
+
+//Dernière modification : 17/04/2016 (Thomas)
 
 public class Avion 
 {
@@ -32,8 +37,12 @@ public class Avion
 				+ marque + ", modele : " + modele + ", estGrand : " + estGrand;
 	}
 	
-	public static Avion getAvion(String immat){ //retourne un avion à partir de son immatriculation
+	public static Avion getAvion(String immat) //retourne un avion à partir de son immatriculation
+	{ 
 		return lesAvions.get(immat);
 	}
-	
+	public boolean getTaille()
+	{
+		return estGrand;
+	}
 }

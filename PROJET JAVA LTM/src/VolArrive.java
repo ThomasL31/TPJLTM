@@ -13,21 +13,22 @@ public class VolArrive extends Vol
 		lesVolsArrive.add(this);
 		
 	}
-	public String toString(){
-	return "VOL ARRIVE - ID : [" + getIdVol()+ "]" + 
-	"En provenance de : " + provenance + 
-	" appareil = " + getAppareil() +
-	"| annulé : "	+ isAnnule() + ", retardé : " + isRetarde() + " |";
-
+	public String toString()
+	{
+		return "VOL ARRIVE - ID : [" + getIdVol()+ "]" + 
+					"En provenance de : " + provenance + 
+					" appareil = " + getAppareil() +
+					"| annulé : "	+ isAnnule() + ", retardé : " + isRetarde() + " |";
 	}
 	
-	public void afficherTout(){
+	public void afficherTout()
+	{
 		
 		for(Vol v : lesVolsArrive)
-	{
-		System.out.println(v.toString() +" | ");
-		v.afficherAvion();
-	}
+		{
+			System.out.println(v.toString() +" | ");
+			v.afficherAvion();
+		}
 	
 	}
 	

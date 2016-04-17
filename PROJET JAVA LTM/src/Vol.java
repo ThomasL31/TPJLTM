@@ -39,19 +39,28 @@ public abstract class Vol
 	
 	public abstract String toString();
 
-	public String getIdVol() {
+	public String getIdVol() 
+	{
 		return idVol;
 	}
 
-	public String getAppareil() {
+	public Horaire getHeure()
+	{
+		return heure;
+	}
+	
+	public String getAppareil() 
+	{
 		return appareil;
 	}
 
-	public boolean isAnnule() {
+	public boolean isAnnule() 
+	{
 		return annule;
 	}
 
-	public boolean isRetarde() {
+	public boolean isRetarde() 
+	{
 		return retarde;
 	}
 

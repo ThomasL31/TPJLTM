@@ -1,110 +1,102 @@
-public class Horaire implements Comparable, Cloneable{
+/*Modif du 17/04/2016 
+	  Ajout d'une méthode permettant de calculer le temps écoulés entre deux horraires
+*/	 
 
+
+//Dernière modification : 17/04/2016 (Thomas)	
+
+public class Horaire implements Comparable, Cloneable
+{
+	
   private int heures,minutes;
 
-
-  public Horaire() {
-
+  public Horaire() 
+  {
     heures=0;
     minutes=0;
-
   }
 
 
-  public Horaire(int h,int m) {
-
+  public Horaire(int h,int m) 
+  {
     heures=h;
     minutes=m;
-
   }
 
-  public Horaire(int m){
-
+  public Horaire(int m)
+  {
     m=m%1440;
-
     heures=m/60;minutes=m%60;
-
   }
 
-  public int horaireEnMinutes(){
-
+  public int horaireEnMinutes()
+  {
      return heures*60+minutes;
-
+  }
+  
+  public Duree tempsEcoule(Horaire h)
+  {
+	  return new Duree(h.horaireEnMinutes() - this.horaireEnMinutes());
   }
 
-   public Horaire ajout(Duree d){
+  public Horaire ajout(Duree d)
+  {
+    int h=horaireEnMinutes()+d.dureeEnMinutes();
+    if(h>=1440)
+      h=h%1440;
 
-     int h=horaireEnMinutes()+d.dureeEnMinutes();
+   return new Horaire(horaireEnMinutes()+d.dureeEnMinutes());
+  }
 
-     if(h>=1440)
-
-       h=h%1440;
-
-    return new Horaire(horaireEnMinutes()+d.dureeEnMinutes());
-
-   }
-
-   public Horaire retrait(Duree d){
-
+   public Horaire retrait(Duree d)
+   {
      int h=horaireEnMinutes()-d.dureeEnMinutes();
-
      while(h<0)
-
        h=h+1440;
-
      return new Horaire(h);
-
    }
 
-   public Duree retrait(Horaire h){
-
+   public Duree retrait(Horaire h)
+   {
      int  m=this.horaireEnMinutes()-h.horaireEnMinutes();
-
      if(m<0) m=-m;
-
+     
      return new Duree(m);
-
-
    }
 
 
-   public String toString(){
-
+   public String toString()
+   {
      String tHeures=heures +" h ";
-
      String tMinutes=((minutes<10)?"0":"")+minutes;
-
-    String info=tHeures+tMinutes;
-     return info;
-
+     String info=tHeures+tMinutes;
+     
+    return info;
    }
 
-   public void afficher(){
-
+   public void afficher()
+   {
      System.out.println(toString());
-
    }
 
-   public int compareTo(Object o){
-
+   public int compareTo(Object o)
+   {
      Horaire h=(Horaire) o;
 
      return horaireEnMinutes()-h.horaireEnMinutes();
-
    }
 
 
-   public Object clone()throws CloneNotSupportedException{
-
+   public Object clone()throws CloneNotSupportedException
+   {
     Horaire h=(Horaire)super.clone();
 
     return h;
-
    }
 
   
- public boolean equals(Object o){
-
+ public boolean equals(Object o)
+ {
 	  Horaire h=(Horaire) o;
 
 	  return this.horaireEnMinutes()==h.horaireEnMinutes();
