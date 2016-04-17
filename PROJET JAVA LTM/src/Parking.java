@@ -4,6 +4,7 @@ public class Parking
 {
 	
 	private String idParking;
+	private Zone secteur;
 	private boolean disponible;
 	private static ArrayList<Parking> lesParkings = new ArrayList<Parking>();
 	
@@ -12,6 +13,10 @@ public class Parking
 		idParking = idP;
 		disponible = true;
 		lesParkings.add(this);
+	}
+	
+	public void setZone(Zone z){
+		secteur = z;
 	}
 	
 	public boolean getDisponible()
@@ -35,6 +40,6 @@ public class Parking
 	public String toString() 
 	{
 		return "Parking [idParking=" + idParking + ", disponible=" + disponible
-				+ ", lesParkings=" + lesParkings + "]";
+				+ ", lesParkings=" + lesParkings + "]" + " zone : " + secteur;
 	}
 }
