@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-//Dernière modification : 17/04/2016 (Thomas)
+//DerniÃ¨re modification : 17/04/2016 (Thomas)
 
 public class Hall 
 {
@@ -14,7 +14,10 @@ public class Hall
 		lesHalls.add(this);
 	}
 
-	
+	public void ajouterPorte(Porte p)
+	{
+		porteHall.add(p);
+	}
 	public String toString() 
 	{
 		return "Hall [idHall=" + idHall + ", porteHall=" + porteHall + "]";
