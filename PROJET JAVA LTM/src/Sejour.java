@@ -40,6 +40,6 @@ public class Sejour
 	public String toString() 
 	{
 		return "Sejour [idSejour=" + idSejour + ", arrive=" + arrive + ", depart=" + depart + ", emplacement="
-				+ emplacement + "]";
+				+ emplacement + ", Temps stationnement=" + this.tempsStationement() + "]";
 	}
 }

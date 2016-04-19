@@ -6,9 +6,9 @@ public class VolArrive extends Vol
 	private String provenance;
 	private ArrayList<VolArrive> lesVolsArrive = new ArrayList<VolArrive>();
 	
-	public VolArrive(String idV, String app, String prov) 
+	public VolArrive(String idV, String app, String prov, Horaire h) 
 	{
-		super(idV, app);
+		super(idV, app,h);
 		provenance = prov;
 		lesVolsArrive.add(this);
 		

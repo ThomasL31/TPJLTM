@@ -6,9 +6,9 @@ public class VolDepart extends Vol
 	private String destination;
 	private ArrayList<VolDepart> lesVolsDepart = new ArrayList<VolDepart>();
 	
-	public VolDepart(String idV, String app,String dest) 
+	public VolDepart(String idV, String app,String dest, Horaire h) 
 	{
-		super(idV, app);
+		super(idV, app,h);
 		destination = dest;
 		lesVolsDepart.add(this);
 	}

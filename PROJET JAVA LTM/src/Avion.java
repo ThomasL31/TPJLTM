@@ -41,6 +41,10 @@ public class Avion
 	{ 
 		return lesAvions.get(immat);
 	}
+	public String getImmat()
+	{
+		return immatriculation;
+	}
 	public boolean getTaille()
 	{
 		return estGrand;

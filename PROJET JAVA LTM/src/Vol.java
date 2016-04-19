@@ -10,12 +10,13 @@ public abstract class Vol
 	private boolean retarde;
 	private Horaire heure;
 	
-	public Vol(String idV, String app)
+	public Vol(String idV, String app, Horaire h)
 	{
-		idVol = idV;
-		appareil =app;
-		retarde = false;
-		annule = false;
+		this.idVol = idV;
+		this.appareil =app;
+		this.heure = h;
+		this.retarde = false;
+		this.annule = false;
 	}
 
 	public void annuler()
