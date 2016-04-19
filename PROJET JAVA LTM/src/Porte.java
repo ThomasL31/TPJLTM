@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-//Dernière modification : 17/04/2016 (Thomas)
+//DerniÃ¨re modification : 17/04/2016 (Thomas)
 
 public class Porte 
 {
@@ -8,9 +8,10 @@ public class Porte
 	private Hall hallPorte;
 	private static ArrayList<Porte> lesPortes = new ArrayList<Porte>();
 	
-	public Porte(String idP)
+	public Porte(String idP, Hall hallP)
 	{
 		this.idPorte = idP;
+		this.hallPorte = idP;
 		lesPortes.add(this);
 	}
 
