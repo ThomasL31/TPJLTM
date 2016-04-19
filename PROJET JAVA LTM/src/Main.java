@@ -20,8 +20,11 @@ public class Main
 		
 		VolArrive v1 = new VolArrive("IT4444",a1.getImmat(),"Rennes",new Horaire(13,10));
 		VolDepart v2 = new VolDepart("IT0056",a1.getImmat(),"Toulouse",new Horaire(15,00));
+		VolArrive v3 = new VolArrive("IT0001",a2.getImmat(),"Vatry",new Horaire(15,00));
+		VolDepart v4 = new VolDepart("IT0002",a2.getImmat(),"Marseille",new Horaire(17,30));
 		
 		Parking p1 = new Parking("Alpha");
+		Parking p2 = new Parking("Beta");
 		
 		Sejour s1 = new Sejour("S0001",v1,v2,p1);
 
