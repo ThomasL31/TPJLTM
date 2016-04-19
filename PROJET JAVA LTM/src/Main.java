@@ -14,7 +14,7 @@ public class Main
 		System.out.println("|    PROGRAMME DE TEST    |");
 		System.out.println(" -------------------------\n");
 
-		/*Création des instances de test*/
+		/*CrÃ©ation des instances de test*/
 		Avion a1 = new Avion("ABX00120045","Airbus","A360", true);
 		Avion a2 = new Avion("ZXX00150056", "Boeing" , "720", false);
 		
@@ -52,7 +52,7 @@ public class Main
 				choix = scanner.nextInt();
 				switch (choix) {
 				case 1:
-					s1.afficherLesSejours();
+					afficherLesSejours();
 					break;
 				case 2:
 					// METHODE
@@ -62,8 +62,8 @@ public class Main
 				}
 				break;
 			case 2:
-				System.out.println("1 - Afficher la liste des vols de départ");
-				System.out.println("2 - Afficher la liste des vols d'arrivé\n");
+				System.out.println("1 - Afficher la liste des vols de dÃ©part");
+				System.out.println("2 - Afficher la liste des vols d'arrivÃ©\n");
 
 				choix = scanner.nextInt();
 				switch (choix) 
@@ -195,7 +195,7 @@ public class Main
 
 
 		}else {
-			System.out.print("Veuillez entrer un numéro valide");
+			System.out.print("Veuillez entrer un numÃ©ro valide");
 		}
 
 
