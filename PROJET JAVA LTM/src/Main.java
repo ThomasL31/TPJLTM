@@ -23,6 +23,10 @@ public class Main
 		VolArrive v3 = new VolArrive("IT0001",a2.getImmat(),"Vatry",new Horaire(15,00));
 		VolDepart v4 = new VolDepart("IT0002",a2.getImmat(),"Marseille",new Horaire(17,30));
 		
+		Hall h1 = new Hall("1");
+		Porte p1 = new Porte("Porte1",1);
+		h1.ajouterPorte(p1);
+		
 		Parking p1 = new Parking("Alpha");
 		Parking p2 = new Parking("Beta");
 		
