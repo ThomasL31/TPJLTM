@@ -13,7 +13,7 @@ public class ParkingContact extends Parking
         lesParkingsContact.add(this);
     }    
     
-    public Parking getLibre()
+    public Parking getLibre() //Renvoi la première place de parking libre
     {
         Parking libre = null;
         boolean trouve = false;
@@ -29,4 +29,16 @@ public class ParkingContact extends Parking
         return libre;
     }
     
+    public String toString()//Méthode à générer avec éclipse
+    {
+        return ":";
+    }
+    
+    public void afficherTout()
+    {
+        for(ParkingContact pc : lesParkingsContact)
+        {
+            pc.toString();
+        }
+    }
 }
