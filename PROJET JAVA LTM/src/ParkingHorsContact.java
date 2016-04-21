@@ -27,4 +27,15 @@ public class ParkingHorsContact extends Parking
         return libre;
     }
     
+    public String toString()//A générer avec éclipse
+    {
+        return ";";
+    }
+    
+    public void afficherTout()
+    {
+        for(ParkingHorsContact phc : lesParkingsHorsContact)
+            phc.toString();
+    }
+    
 }
