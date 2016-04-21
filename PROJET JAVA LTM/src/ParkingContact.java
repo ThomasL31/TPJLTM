@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class ParkingContact extends Parking
 {
-    private static ArrayList<ParkingContact> lesParkingsContact = new ArrayList<lesParkingsContact>();
+    private static ArrayList<ParkingContact> lesParkingsContact = new ArrayList<ParkingContact>();
     
     public ParkingContact(String idP, Zone sect)
     {
