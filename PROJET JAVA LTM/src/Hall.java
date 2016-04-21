@@ -14,9 +14,21 @@ public class Hall
 		lesHalls.add(this);
 	}
 
-	public void ajouterPorte(Porte p)
+	public void affecterPorte(Porte p)//Ajouter une porte à un hall
 	{
 		porteHall.add(p);
+	}
+	
+	public void afficherPortes()//Afficher les portes d'un hall
+	{
+		for(Porte p : porteHall)
+			System.out.println(p.toString());
+	}
+	
+	public void afficherLesHalls()
+	{
+		for(Hall h : lesHalls)
+			System.out.println(h.toString());
 	}
 	public String toString() 
 	{
