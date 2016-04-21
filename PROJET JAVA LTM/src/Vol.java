@@ -9,6 +9,7 @@ public abstract class Vol
 	private boolean annule;
 	private boolean retarde;
 	private Horaire heure;
+	private static ArrayList<Vol> lesVols = new ArrayList<Vol>();
 	
 	public Vol(String idV, String app, Horaire h)
 	{
@@ -17,6 +18,7 @@ public abstract class Vol
 		this.heure = h;
 		this.retarde = false;
 		this.annule = false;
+		lesVols.add();
 	}
 
 	public void annuler()
