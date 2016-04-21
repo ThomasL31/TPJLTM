@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Parking 
+public abstract class Parking 
 {
 	
 	private String idParking;
@@ -8,10 +8,11 @@ public class Parking
 	private boolean disponible;
 	private static ArrayList<Parking> lesParkings = new ArrayList<Parking>();
 	
-	public Parking(String idP)
+	public Parking(String idP, Zone sect)
 	{
-		idParking = idP;
-		disponible = true;
+		this.idParking = idP;
+		this.disponible = true;
+		this.secteur = sect;
 		lesParkings.add(this);
 	}
 	
@@ -36,10 +37,6 @@ public class Parking
 		}
 	}
 	
-	
-	public String toString() 
-	{
-		return "Parking [idParking=" + idParking + ", disponible=" + disponible
-				+ ", lesParkings=" + lesParkings + "]" + " zone : " + secteur;
-	}
+	public abstract String toString();
+	public abstract Parking getLibre();
 }
