@@ -11,7 +11,7 @@ public class ParkingHorsContact extends Parking
         lesParkingsHorsContact.add(this);
     }    
     
-  public Parking getLibre()
+    public Parking getLibre()//Renvoi la première place de parking hors contact libre
     {
         Parking libre = null;
         boolean trouve = false;
@@ -26,4 +26,5 @@ public class ParkingHorsContact extends Parking
         
         return libre;
     }
+    
 }
